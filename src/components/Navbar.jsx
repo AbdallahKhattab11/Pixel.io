@@ -12,11 +12,11 @@ const Navbar = () => {
         <div className="logo">
           <img src={logo} alt="logo" className="h-8" />
         </div>
-        <div className="links hidden md:flex gap-5 text-sm font-medium text-gray-300">
-          <a href="#home">Home</a>
-          <a href="#services">Services</a>
-          <a href="#pricing">Pricing</a>
-          <a href="#faq">FAQ</a>
+        <div className="links hidden md:flex gap-8 text-sm font-medium text-gray-300">
+          <a href="#home" className="hover:text-white transition">Home</a>
+          <a href="#services" className="hover:text-white transition">Services</a>
+          <a href="#pricing" className="hover:text-white transition">Pricing</a>
+          <a href="#faq" className="hover:text-white transition">FAQ</a>
         </div>
         <div className="buttons hidden md:flex gap-5">
           <button
@@ -55,10 +55,10 @@ const Navbar = () => {
           <IoClose size={24} />
         </button>
         <div className="links flex flex-col gap-5 text-base font-medium text-gray-300 mt-5">
-          <a href="#home">Home</a>
-          <a href="#services">Services</a>
-          <a href="#pricing">Pricing</a>
-          <a href="#faq">FAQ</a>
+          <a href="#home" className="hover:text-white transition">Home</a>
+          <a href="#services" className="hover:text-white transition">Services</a>
+          <a href="#pricing" className="hover:text-white transition">Pricing</a>
+          <a href="#faq" className="hover:text-white transition">FAQ</a>
         </div>
         <div className="buttons flex flex-col gap-5 items-start mt-5">
           <button
