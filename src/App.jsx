@@ -6,6 +6,8 @@ import Services from "./components/Services";
 import Pricing from "./components/Pricing";
 import FAQ from "./components/FAQ";
 import Banner from "./components/Banner";
+import Footer from "./components/Footer";
+
 const App = () => {
   return (
     <main className="App w-full h-screen relative">
@@ -17,6 +19,7 @@ const App = () => {
       <Pricing />
       <FAQ />
       <Banner />
+      <Footer />
     </main>
   );
 };
