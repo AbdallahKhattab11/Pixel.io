@@ -47,8 +47,8 @@ const Pricing = () => {
   ];
 
   return (
-    <section id="pricing" className="py-24 bg-gray-950 border-t border-white/5">
-      <div className="max-w-6xl mx-auto px-4">
+    <section id="pricing" className="py-20 bg-white/3 border-t border-white/6">
+      <div className="container">
         {/* Header */}
         <div className="text-center mb-16">
           <p className="text-sm font-semibold text-indigo-400 uppercase tracking-widest mb-3">
