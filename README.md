@@ -36,8 +36,7 @@ Follow these instructions to set up the project locally on your machine.
 1.  **Clone the repository**
 
     ```bash
-    git clone https://github.com/your-username/pixel-io.git
-    cd pixel-io/my-app
+    git clone git@github.com:AbdallahKhattab11/Pixel.io.git
     ```
 
 2.  **Install Dependencies**
