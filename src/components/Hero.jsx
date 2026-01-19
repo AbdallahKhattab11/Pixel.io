@@ -65,17 +65,17 @@ const Hero = () => {
                 <IoFlashOutline className="size-4 text-cyan-500" />
                 <div>
                   <div>Strategy-led execution</div>
-                  <div class="text-xs text-gray-400">
+                  <div className="text-xs text-gray-400">
                     Focused on growth &amp; results
                   </div>
                 </div>
               </div>
-              <div class="hidden sm:block h-6 w-px bg-white/6"></div>
-              <div class="flex items-center gap-2 p-2 px-3 sm:px-6.5 hover:bg-white/3 transition-colors">
+              <div className="hidden sm:block h-6 w-px bg-white/6"></div>
+              <div className="flex items-center gap-2 p-2 px-3 sm:px-6.5 hover:bg-white/3 transition-colors">
                 <FaCheck className="size-4 text-cyan-500" />
                 <div>
                   <div>Full-service delivery</div>
-                  <div class="text-xs text-gray-400">
+                  <div className="text-xs text-gray-400">
                     Design, dev &amp; marketing
                   </div>
                 </div>
@@ -91,10 +91,10 @@ const Hero = () => {
                 alt="hero_img"
                 className="w-full h-full object-cover object-center"
               />
-              <div class="absolute right-4 bottom-4">
-                <button class="inline-flex items-center gap-2 rounded-full px-4 py-2 bg-white/6 backdrop-blur-sm hover:bg-white/10 transition focus:outline-none">
+              <div className="absolute right-4 bottom-4">
+                <button className="inline-flex items-center gap-2 rounded-full px-4 py-2 bg-white/6 backdrop-blur-sm hover:bg-white/10 transition focus:outline-none">
                   <IoPlayOutline className="text-xl" />
-                  <span class="text-xs">See case study</span>
+                  <span className="text-xs">See case study</span>
                 </button>
               </div>
             </div>

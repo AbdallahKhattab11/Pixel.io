@@ -2,9 +2,9 @@ import { LuUpload } from "react-icons/lu";
 import { IoFlashOutline, IoVideocamOutline } from "react-icons/io5";
 const Services = () => {
   return (
-    <section id="services" class="py-20 2xl:py-32">
-      <div class="container">
-        <div class="text-center mb-16">
+    <section id="services" className="py-20 2xl:py-32">
+      <div className="container">
+        <div className="text-center mb-16">
           <p className="text-sm font-medium text-violet-400 uppercase tracking-wide mb-3">
             Services
           </p>
