@@ -1,7 +1,7 @@
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import BackgroundEffect from "./components/ui/BackgroundEffect";
-import HeroTest from "./components/HeroTest";
+import Marquee from "./components/Marquee";
 
 const App = () => {
   return (
@@ -9,7 +9,7 @@ const App = () => {
       <BackgroundEffect />
       <Navbar />
       <Hero />
-      {/* <HeroTest /> */}
+      <Marquee />
     </main>
   );
 };

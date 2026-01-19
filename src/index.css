@@ -30,5 +30,19 @@ html {
 
 
 .container {
-    @apply w-full h-full mx-auto px-4 transition-all duration-300 max-w-6xl;
+    @apply w-full h-full mx-auto px-4 transition-all duration-300 max-w-6xl overflow-hidden;
+}
+
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.animate-marquee {
+    @apply animate-[marquee_16s_linear_infinite];
 }
