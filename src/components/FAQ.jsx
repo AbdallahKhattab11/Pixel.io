@@ -26,7 +26,7 @@ const FAQ = () => {
 
   return (
     <section id="faq" className="py-20 2xl:py-32">
-      <div className="container">
+      <div className="mx-auto max-w-3xl">
         {/* Header */}
         <div className="text-center mb-16">
           <p className="text-sm font-semibold text-indigo-400 uppercase tracking-widest mb-3">
