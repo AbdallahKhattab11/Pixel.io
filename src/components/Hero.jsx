@@ -9,6 +9,7 @@ import thumbnail_3 from "../assets/images/project-thumbnail-3.jpg";
 import { FaArrowRight, FaCheck } from "react-icons/fa6";
 import { IoPlayOutline } from "react-icons/io5";
 import { IoFlashOutline } from "react-icons/io5";
+import { motion } from "framer-motion";
 
 const Hero = () => {
   return (
@@ -17,7 +18,18 @@ const Hero = () => {
         <div className=" grid grid-cols-1 md:grid-cols-2 items-center gap-10 ">
           {/* Left Content */}
           <div className="text-left max-w-lg">
-            <div className="inline-flex items-center gap-3 pl-3 pr-4 py-1.5 rounded-full bg-white/10 mb-6 justify-start">
+            <motion.div
+              initial={{ y: 60, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{
+                type: "spring",
+                stiffness: 250,
+                damping: 70,
+                mass: 1,
+              }}
+              className="inline-flex items-center gap-3 pl-3 pr-4 py-1.5 rounded-full bg-white/10 mb-6 justify-start"
+            >
               <div className="founders flex items-center -space-x-2">
                 <img
                   src={founder_1}
@@ -38,19 +50,55 @@ const Hero = () => {
               <span className="text-xs text-gray-200/90">
                 Trusted by brands & founders worldwide
               </span>
-            </div>
-            <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-6 max-w-xl">
+            </motion.div>
+            <motion.h1
+              initial={{ y: 60, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{
+                type: "spring",
+                stiffness: 250,
+                damping: 70,
+                mass: 1,
+                delay: 0.1,
+              }}
+              className="text-4xl md:text-5xl font-bold leading-tight mb-6 max-w-xl"
+            >
               We design &amp; build <br />
               <span className="bg-clip-text text-transparent bg-linear-to-r from-indigo-300 to-indigo-400">
                 high-impact digital experiences
               </span>
-            </h1>
-            <p className="text-gray-300 max-w-lg mb-8">
+            </motion.h1>
+            <motion.p
+              initial={{ y: 60, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{
+                type: "spring",
+                stiffness: 250,
+                damping: 70,
+                mass: 1,
+                delay: 0.2,
+              }}
+              className="text-gray-300 max-w-lg mb-8"
+            >
               A creative digital agency helping startups and businesses grow
               through thoughtful design, scalable development and
               performance-driven strategy.
-            </p>
-            <div className="inline-flex items-center gap-4 mb-8">
+            </motion.p>
+            <motion.div
+              initial={{ y: 60, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{
+                type: "spring",
+                stiffness: 250,
+                damping: 70,
+                mass: 1,
+                delay: 0.3,
+              }}
+              className="inline-flex items-center gap-4 mb-8"
+            >
               <button className="inline-flex items-center justify-center gap-2 rounded-full text-sm font-medium bg-linear-to-br from-indigo-500 to-indigo-600 hover:opacity-90 active:scale-95 transition-all max-sm:w-full py-3 px-7">
                 Start your project
                 <FaArrowRight />
@@ -59,8 +107,20 @@ const Hero = () => {
                 <IoPlayOutline className="size-4" />
                 View our work
               </button>
-            </div>
-            <div className="flex sm:inline-flex overflow-hidden items-center max-sm:justify-center text-sm text-gray-200 bg-white/10 rounded">
+            </motion.div>
+            <motion.div
+              initial={{ y: 60, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{
+                type: "spring",
+                stiffness: 250,
+                damping: 70,
+                mass: 1,
+                delay: 0.1,
+              }}
+              className="flex sm:inline-flex overflow-hidden items-center max-sm:justify-center text-sm text-gray-200 bg-white/10 rounded"
+            >
               <div className="flex items-center gap-2 p-2 px-3 sm:px-6.5 hover:bg-white/3 transition-colors">
                 <IoFlashOutline className="size-4 text-cyan-500" />
                 <div>
@@ -80,16 +140,29 @@ const Hero = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </motion.div>
           </div>
 
           {/* Right Content */}
-          <div className="max-w-lg">
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{
+              type: "spring",
+              stiffness: 250,
+              damping: 70,
+              mass: 1,
+              delay: 0.5,
+            }}
+            className="max-w-lg"
+          >
             <div className="relative aspect-16/10 bg-gray-900 overflow-hidden rounded-3xl">
               <img
                 src={hero_img}
                 alt="hero_img"
                 className="w-full h-full object-cover object-center"
+                fetchPriority="high"
               />
               <div className="absolute right-4 bottom-4">
                 <button className="inline-flex items-center gap-2 rounded-full px-4 py-2 bg-white/6 backdrop-blur-sm hover:bg-white/10 transition focus:outline-none">
@@ -100,36 +173,84 @@ const Hero = () => {
             </div>
             {/* Project Thumbnails */}
             <div className="mt-4 flex gap-3 items-center justify-start">
-              <div className="w-14 h-10 rounded-lg overflow-hidden border border-white/6">
+              <motion.div
+                initial={{ y: 20, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{
+                  type: "spring",
+                  stiffness: 250,
+                  damping: 70,
+                  mass: 1,
+                  delay: 0.1,
+                }}
+                className="w-14 h-10 rounded-lg overflow-hidden border border-white/6"
+              >
                 <img
                   alt="project-thumbnail"
                   className="w-full h-full object-cover"
                   src={thumbnail_1}
                 />
-              </div>
-              <div className="w-14 h-10 rounded-lg overflow-hidden border border-white/6">
+              </motion.div>
+              <motion.div
+                initial={{ y: 20, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{
+                  type: "spring",
+                  stiffness: 250,
+                  damping: 70,
+                  mass: 1,
+                  delay: 0.2,
+                }}
+                className="w-14 h-10 rounded-lg overflow-hidden border border-white/6"
+              >
                 <img
                   alt="project-thumbnail"
                   className="w-full h-full object-cover"
                   src={thumbnail_2}
                 />
-              </div>
-              <div className="w-14 h-10 rounded-lg overflow-hidden border border-white/6">
+              </motion.div>
+              <motion.div
+                initial={{ y: 20, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{
+                  type: "spring",
+                  stiffness: 250,
+                  damping: 70,
+                  mass: 1,
+                  delay: 0.3,
+                }}
+                className="w-14 h-10 rounded-lg overflow-hidden border border-white/6"
+              >
                 <img
                   alt="project-thumbnail"
                   className="w-full h-full object-cover"
                   src={thumbnail_3}
                 />
-              </div>
-              <div className="text-sm text-gray-400 ml-2 flex items-center gap-2">
+              </motion.div>
+              <motion.div
+                initial={{ y: 60, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{
+                  type: "spring",
+                  stiffness: 250,
+                  damping: 70,
+                  mass: 1,
+                  delay: 0.2,
+                }}
+                className="text-sm text-gray-400 ml-2 flex items-center gap-2"
+              >
                 <div className="relative flex h-3.5 w-3.5 items-center justify-center">
                   <span className="absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75 animate-ping duration-300"></span>
                   <span className="relative inline-flex size-2 rounded-full bg-green-600"></span>
                 </div>
                 20+ completed projects
-              </div>
+              </motion.div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

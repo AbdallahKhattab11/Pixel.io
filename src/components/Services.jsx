@@ -1,23 +1,34 @@
+/* eslint-disable no-unused-vars */
 import { LuUpload } from "react-icons/lu";
 import { IoFlashOutline, IoVideocamOutline } from "react-icons/io5";
+import { motion } from "framer-motion";
+import Title from "./ui/Title";
+
 const Services = () => {
   return (
     <section id="services" className="py-20 2xl:py-32">
       <div className="container">
-        <div className="text-center mb-16">
-          <p className="text-sm font-medium text-violet-400 uppercase tracking-wide mb-3">
-            Services
-          </p>
-          <h2 className="text-2xl md:text-4xl text-white font-semibold">
-            Everything your brand needs to grow
-          </h2>
-          <p className="max-w-md mx-auto text-sm text-gray-400 my-3">
-            From strategy to execution, we help businesses build strong digital
-            products and meaningful customer experiences.
-          </p>
-        </div>
+        <Title
+          title="Services"
+          heading="Everything your brand needs to grow"
+          description="From strategy to execution, we help businesses build strong digital products and meaningful customer experiences."
+        />
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div className="rounded-2xl p-6 bg-white/3 border border-white/6 transition duration-300 hover:border-white/15 hover:-translate-y-1">
+          <motion.div
+            initial={{ y: 100, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            viewport={{ once: true }}
+            whileHover={{
+              y: -5,
+              transition: { duration: 0.2, ease: "easeOut" },
+            }}
+            transition={{
+              duration: 0.5,
+              delay: 0.1,
+              ease: "easeInOut",
+            }}
+            className="rounded-2xl p-6 bg-white/3 border border-white/6 hover:border-white/15"
+          >
             <div className="w-12 h-12 rounded-lg bg-violet-900/20 flex items-center justify-center mb-4">
               <LuUpload className="w-6 h-6" />
             </div>
@@ -28,8 +39,22 @@ const Services = () => {
               We understand your goals, audience and challenges to craft a
               clear, actionable strategy.
             </p>
-          </div>
-          <div className="rounded-2xl p-6 bg-white/3 border border-white/6 transition duration-300 hover:border-white/15 hover:-translate-y-1">
+          </motion.div>
+          <motion.div
+            initial={{ y: 100, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            viewport={{ once: true }}
+            whileHover={{
+              y: -4,
+              transition: { duration: 0.3, ease: "easeInOut" },
+            }}
+            transition={{
+              duration: 0.5,
+              delay: 0.2,
+              ease: "easeOut",
+            }}
+            className="rounded-2xl p-6 bg-white/3 border border-white/6 hover:border-white/15"
+          >
             <div className="w-12 h-12 rounded-lg bg-violet-900/20 flex items-center justify-center mb-4">
               <IoFlashOutline className="w-6 h-6" />
             </div>
@@ -40,8 +65,22 @@ const Services = () => {
               High-quality design and scalable development focused on
               performance and usability.
             </p>
-          </div>
-          <div className="rounded-2xl p-6 bg-white/3 border border-white/6 transition duration-300 hover:border-white/15 hover:-translate-y-1">
+          </motion.div>
+          <motion.div
+            initial={{ y: 100, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            viewport={{ once: true }}
+            whileHover={{
+              y: -4,
+              transition: { duration: 0.2, ease: "easeInOut" },
+            }}
+            transition={{
+              duration: 0.5,
+              delay: 0.3,
+              ease: "easeOut",
+            }}
+            className="rounded-2xl p-6 bg-white/3 border border-white/6 hover:border-white/15"
+          >
             <div className="w-12 h-12 rounded-lg bg-violet-900/20 flex items-center justify-center mb-4">
               <IoVideocamOutline className="w-6 h-6" />
             </div>
@@ -50,7 +89,7 @@ const Services = () => {
               We launch, optimize and continuously improve to drive measurable
               business growth.
             </p>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

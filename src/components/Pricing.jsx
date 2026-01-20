@@ -1,4 +1,7 @@
+/* eslint-disable no-unused-vars */
 import { LuCheck } from "react-icons/lu";
+import { motion } from "framer-motion";
+import Title from "./ui/Title";
 
 const Pricing = () => {
   const plans = [
@@ -50,25 +53,29 @@ const Pricing = () => {
     <section id="pricing" className="py-20 bg-white/3 border-t border-white/6">
       <div className="container">
         {/* Header */}
-        <div className="text-center mb-16">
-          <p className="text-sm font-semibold text-indigo-400 uppercase tracking-widest mb-3">
-            Pricing
-          </p>
-          <h2 className="text-3xl md:text-5xl text-white font-bold mb-4">
-            Simple, transparent pricing
-          </h2>
-          <p className="max-w-md mx-auto text-gray-400 text-lg">
-            Flexible agency packages designed to fit startups, growing teams and
-            established brands.
-          </p>
-        </div>
+        <Title
+          title="Pricing"
+          heading="Simple, transparent pricing"
+          description="Flexible agency packages designed to fit startups, growing teams and established brands."
+        />
 
         {/* Pricing Cards Grid */}
         <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {plans.map((plan, index) => (
-            <div
+            <motion.div
+              initial={{ y: 150, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              viewport={{ once: true }}
+              whileHover={{ y: -10, transition: { duration: 0.5 } }}
+              transition={{
+                type: "spring",
+                stiffness: 250,
+                damping: 70,
+                mass: 1,
+                delay: 0.1 + index * 0.1,
+              }}
               key={index}
-              className={`relative p-8 rounded-2xl border transition-all duration-500 hover:-translate-y-2 
+              className={`relative p-8 rounded-2xl border 
                 ${
                   plan.isPopular
                     ? "bg-indigo-600/10 border-indigo-500/50 shadow-[0_0_30px_-10px_rgba(79,70,229,0.3)]"
@@ -123,7 +130,7 @@ const Pricing = () => {
               >
                 Get started
               </button>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

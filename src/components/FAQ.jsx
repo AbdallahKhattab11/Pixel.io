@@ -1,4 +1,7 @@
+/* eslint-disable no-unused-vars */
 import { LuChevronDown } from "react-icons/lu";
+import Title from "./ui/Title";
+import { motion } from "framer-motion";
 
 const FAQ = () => {
   const faqs = [
@@ -28,25 +31,28 @@ const FAQ = () => {
     <section id="faq" className="py-20 2xl:py-32">
       <div className="mx-auto max-w-3xl">
         {/* Header */}
-        <div className="text-center mb-16">
-          <p className="text-sm font-semibold text-indigo-400 uppercase tracking-widest mb-3">
-            FAQ
-          </p>
-          <h2 className="text-3xl md:text-4xl text-white font-bold mb-4">
-            Frequently asked questions
-          </h2>
-          <p className="max-w-md mx-auto text-gray-400 text-sm">
-            Everything you need to know about working with our agency. If you
-            have more questions, feel free to reach out.
-          </p>
-        </div>
+        <Title
+          title="FAQ"
+          heading="Frequently asked questions"
+          description="Everything you need to know about working with our agency. If you have more questions, feel free to reach out."
+        />
 
         {/* Accordion List */}
         <div className="space-y-4">
           {faqs.map((faq, index) => (
-            <details
+            <motion.details
+              initial={{ y: 100, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{
+                type: "spring",
+                stiffness: 250,
+                damping: 70,
+                mass: 1,
+                delay: 0.1 + index * 0.1,
+              }}
               key={index}
-              className="group bg-white/2 border border-white/5 rounded-2xl select-none transition-all duration-300 open:bg-white/5 open:border-white/10"
+              className="group bg-white/2 border border-white/5 rounded-2xl select-none open:bg-white/5 open:border-white/10"
             >
               <summary className="flex items-center justify-between p-5 cursor-pointer list-none">
                 <h4 className="font-medium text-white group-open:text-indigo-400 transition-colors">
@@ -59,7 +65,7 @@ const FAQ = () => {
               <div className="px-5 pb-5 text-gray-100 text-sm leading-relaxed">
                 {faq.answer}
               </div>
-            </details>
+            </motion.details>
           ))}
         </div>
       </div>

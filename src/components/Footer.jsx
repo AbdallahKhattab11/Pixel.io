@@ -1,5 +1,7 @@
+/* eslint-disable no-unused-vars */
 import logo from "../assets/images/logo.svg";
 import { FaTwitter, FaLinkedinIn, FaGithub } from "react-icons/fa";
+import { motion } from "framer-motion";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -113,7 +115,7 @@ const Footer = () => {
         {/* Bottom Section */}
         <div className="py-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs tracking-wide">
           <p>© {currentYear} Pixel io. All rights reserved.</p>
-          <p className="text-slate-500 italic">
+          <p className="text-slate-500 italic flex items-center gap-1">
             Built with Passion by{" "}
             <span className="text-violet-400">Abdallah Khattab</span>
           </p>

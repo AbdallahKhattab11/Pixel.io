@@ -1,15 +1,21 @@
-// 1. Imports: Assets, Hooks, and Icons
+/* eslint-disable no-unused-vars */
 import logo from "../assets/images/logo.svg";
 import { useState } from "react";
 import { FaBars } from "react-icons/fa6";
 import { IoClose } from "react-icons/io5";
+import { motion } from "framer-motion";
 
 const Navbar = () => {
-  // 2. State for controlling the mobile menu toggle
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
-    <nav className="fixed top-5 left-0 right-0 z-50 px-4">
+    <motion.nav
+      className="fixed top-5 left-0 right-0 z-50 px-4"
+      initial={{ y: -100, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      viewport={{ once: true }}
+      transition={{ type: "spring", stiffness: 250, damping: 70, mass: 1 }}
+    >
       {/* --- Main Desktop Container --- */}
       <div className="container flex items-center justify-between bg-black/50 backdrop-blur-md border border-white/4 rounded-2xl p-3">
         {/* Logo Section */}
@@ -78,16 +84,32 @@ const Navbar = () => {
 
         {/* Mobile Navigation Links */}
         <div className="links flex flex-col gap-5 text-base font-medium text-gray-300 mt-5">
-          <a href="#home" className="hover:text-white transition" onClick={() => setIsMobileMenuOpen(false)}>
+          <a
+            href="#home"
+            className="hover:text-white transition"
+            onClick={() => setIsMobileMenuOpen(false)}
+          >
             Home
           </a>
-          <a href="#services" className="hover:text-white transition" onClick={() => setIsMobileMenuOpen(false)}>
+          <a
+            href="#services"
+            className="hover:text-white transition"
+            onClick={() => setIsMobileMenuOpen(false)}
+          >
             Services
           </a>
-          <a href="#pricing" className="hover:text-white transition" onClick={() => setIsMobileMenuOpen(false)}>
+          <a
+            href="#pricing"
+            className="hover:text-white transition"
+            onClick={() => setIsMobileMenuOpen(false)}
+          >
             Pricing
           </a>
-          <a href="#faq" className="hover:text-white transition" onClick={() => setIsMobileMenuOpen(false)}>
+          <a
+            href="#faq"
+            className="hover:text-white transition"
+            onClick={() => setIsMobileMenuOpen(false)}
+          >
             FAQ
           </a>
         </div>
@@ -108,7 +130,7 @@ const Navbar = () => {
           </button>
         </div>
       </div>
-    </nav>
+    </motion.nav>
   );
 };
 
