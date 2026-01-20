@@ -30,7 +30,7 @@ const Services = () => {
             className="rounded-2xl p-6 bg-white/3 border border-white/6 hover:border-white/15"
           >
             <div className="w-12 h-12 rounded-lg bg-violet-900/20 flex items-center justify-center mb-4">
-              <LuUpload className="w-6 h-6" />
+              <LuUpload className="w-6 h-6" aria-hidden="true" />
             </div>
             <h3 className="text-lg font-semibold mb-2">
               Discovery &amp; Planning
@@ -56,7 +56,7 @@ const Services = () => {
             className="rounded-2xl p-6 bg-white/3 border border-white/6 hover:border-white/15"
           >
             <div className="w-12 h-12 rounded-lg bg-violet-900/20 flex items-center justify-center mb-4">
-              <IoFlashOutline className="w-6 h-6" />
+              <IoFlashOutline className="w-6 h-6" aria-hidden="true" />
             </div>
             <h3 className="text-lg font-semibold mb-2">
               Design &amp; Development
@@ -82,7 +82,7 @@ const Services = () => {
             className="rounded-2xl p-6 bg-white/3 border border-white/6 hover:border-white/15"
           >
             <div className="w-12 h-12 rounded-lg bg-violet-900/20 flex items-center justify-center mb-4">
-              <IoVideocamOutline className="w-6 h-6" />
+              <IoVideocamOutline className="w-6 h-6" aria-hidden="true" />
             </div>
             <h3 className="text-lg font-semibold mb-2">Launch &amp; Growth</h3>
             <p className="text-gray-300 text-sm leading-relaxed">

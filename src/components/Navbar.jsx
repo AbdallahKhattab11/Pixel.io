@@ -15,6 +15,7 @@ const Navbar = () => {
       animate={{ y: 0, opacity: 1 }}
       viewport={{ once: true }}
       transition={{ type: "spring", stiffness: 250, damping: 70, mass: 1 }}
+      aria-label="Main Navigation"
     >
       {/* --- Main Desktop Container --- */}
       <div className="container flex items-center justify-between bg-black/50 backdrop-blur-md border border-white/4 rounded-2xl p-3">
@@ -61,16 +62,21 @@ const Navbar = () => {
             type="button"
             className="text-gray-300 hover:text-white transition"
             onClick={() => setIsMobileMenuOpen(true)}
+            aria-label="Open main menu"
+            aria-expanded={isMobileMenuOpen}
+            aria-controls="mobile-menu"
           >
-            <FaBars size={24} />
+            <FaBars size={24} aria-hidden="true" />
           </button>
         </div>
       </div>
 
       {/* --- Mobile Sidebar Menu --- */}
       <div
+        id="mobile-menu"
+        aria-hidden={!isMobileMenuOpen}
         className={`mobile-menu-links fixed top-0 ${
-          isMobileMenuOpen ? "right-0" : "-right-full"
+          isMobileMenuOpen ? "right-0 visible" : "-right-full invisible"
         } w-[270px] h-screen bg-black/50 backdrop-blur-md pt-5 px-5 flex flex-col gap-5 transition-all duration-300`}
       >
         {/* Close Button for Mobile Menu */}
@@ -78,8 +84,9 @@ const Navbar = () => {
           type="button"
           onClick={() => setIsMobileMenuOpen(false)}
           className="text-black bg-gray-300 p-2 rounded-lg self-end"
+          aria-label="Close menu"
         >
-          <IoClose size={24} />
+          <IoClose size={24} aria-hidden="true" />
         </button>
 
         {/* Mobile Navigation Links */}

@@ -1,8 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
-@import 'tailwindcss';
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+@import "tailwindcss";
 
 * {
-    font-family: 'Outfit', sans-serif;
+  font-family: "Outfit", sans-serif;
 }
 
 html {
@@ -10,39 +10,40 @@ html {
 }
 
 @layer base {
-    body {
-        @apply bg-gray-950 text-white antialiased;
-    }
+  body {
+    @apply bg-gray-950 text-white antialiased;
+  }
 
-    button {
-        @apply cursor-pointer;
-    }
+  button {
+    @apply cursor-pointer;
+  }
+
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-indigo-500;
+  }
 }
-
 
 @theme {
-    --color-primary: #8b5cf6;
-    --color-primary-hover: #7c3aed;
-    --color-secondary: #ec4899;
-    --color-dark-bg: #0f172a;
-    --color-dark-card: #1e293b;
+  --color-primary: #8b5cf6;
+  --color-primary-hover: #7c3aed;
+  --color-secondary: #ec4899;
+  --color-dark-bg: #0f172a;
+  --color-dark-card: #1e293b;
 }
-
 
 .container {
-    @apply w-full h-full mx-auto px-4 transition-all duration-300 max-w-6xl overflow-hidden;
+  @apply w-full h-full mx-auto px-4 transition-all duration-300 max-w-6xl overflow-hidden;
 }
 
-
 @keyframes marquee {
-    0% {
-        transform: translateX(0%);
-    }
-    100% {
-        transform: translateX(-50%);
-    }
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 .animate-marquee {
-    @apply animate-[marquee_16s_linear_infinite];
+  @apply animate-[marquee_16s_linear_infinite];
 }

@@ -43,7 +43,11 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12 pb-16 border-b border-white/10">
           {/* Brand & Description */}
           <div className="md:col-span-5 lg:col-span-6">
-            <img alt="logo" className="h-8 mb-6 brightness-110" src={logo} />
+            <img
+              alt="Pixel.io Logo"
+              className="h-8 mb-6 brightness-110"
+              src={logo}
+            />
             <p className="max-w-md text-sm leading-relaxed text-slate-400">
               We are a digital agency focused on strategy, design and
               development—helping brands build meaningful digital experiences
@@ -102,7 +106,9 @@ const Footer = () => {
                       rel="noopener noreferrer"
                       className="flex items-center gap-2 hover:text-white transition-colors duration-200"
                     >
-                      <span className="text-lg">{social.icon}</span>
+                      <span className="text-lg" aria-hidden="true">
+                        {social.icon}
+                      </span>
                       {social.name}
                     </a>
                   </li>

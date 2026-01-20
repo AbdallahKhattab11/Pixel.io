@@ -59,7 +59,7 @@ const FAQ = () => {
                   {faq.question}
                 </h4>
                 <div className="text-gray-400 group-open:rotate-180 transition-transform duration-300">
-                  <LuChevronDown size={20} />
+                  <LuChevronDown size={20} aria-hidden="true" />
                 </div>
               </summary>
               <div className="px-5 pb-5 text-gray-100 text-sm leading-relaxed">

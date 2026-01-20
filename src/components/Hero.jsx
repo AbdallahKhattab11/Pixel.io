@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import founder_1 from "../assets/images/brand-founder-1.jpg";
 import founder_2 from "../assets/images/brand-founder-2.jpg";
 import founder_3 from "../assets/images/brand-founder-3.jpg";
@@ -33,17 +34,17 @@ const Hero = () => {
               <div className="founders flex items-center -space-x-2">
                 <img
                   src={founder_1}
-                  alt="founder_1"
+                  alt=""
                   className="size-6 rounded-full border border-black/50"
                 />
                 <img
                   src={founder_2}
-                  alt="founder_2"
+                  alt=""
                   className="size-6 rounded-full border border-black/50"
                 />
                 <img
                   src={founder_3}
-                  alt="founder_3"
+                  alt=""
                   className="size-6 rounded-full border border-black/50"
                 />
               </div>
@@ -101,10 +102,10 @@ const Hero = () => {
             >
               <button className="inline-flex items-center justify-center gap-2 rounded-full text-sm font-medium bg-linear-to-br from-indigo-500 to-indigo-600 hover:opacity-90 active:scale-95 transition-all max-sm:w-full py-3 px-7">
                 Start your project
-                <FaArrowRight />
+                <FaArrowRight aria-hidden="true" />
               </button>
               <button className="inline-flex items-center gap-2 rounded-full text-sm font-medium border border-white/10 bg-white/3 hover:bg-white/6 backdrop-blur-sm active:scale-95 transition max-sm:w-full max-sm:justify-center py-3 px-5">
-                <IoPlayOutline className="size-4" />
+                <IoPlayOutline className="size-4" aria-hidden="true" />
                 View our work
               </button>
             </motion.div>
@@ -122,7 +123,10 @@ const Hero = () => {
               className="flex sm:inline-flex overflow-hidden items-center max-sm:justify-center text-sm text-gray-200 bg-white/10 rounded"
             >
               <div className="flex items-center gap-2 p-2 px-3 sm:px-6.5 hover:bg-white/3 transition-colors">
-                <IoFlashOutline className="size-4 text-cyan-500" />
+                <IoFlashOutline
+                  className="size-4 text-cyan-500"
+                  aria-hidden="true"
+                />
                 <div>
                   <div>Strategy-led execution</div>
                   <div className="text-xs text-gray-400">
@@ -132,7 +136,7 @@ const Hero = () => {
               </div>
               <div className="hidden sm:block h-6 w-px bg-white/6"></div>
               <div className="flex items-center gap-2 p-2 px-3 sm:px-6.5 hover:bg-white/3 transition-colors">
-                <FaCheck className="size-4 text-cyan-500" />
+                <FaCheck className="size-4 text-cyan-500" aria-hidden="true" />
                 <div>
                   <div>Full-service delivery</div>
                   <div className="text-xs text-gray-400">
@@ -160,13 +164,16 @@ const Hero = () => {
             <div className="relative aspect-16/10 bg-gray-900 overflow-hidden rounded-3xl">
               <img
                 src={hero_img}
-                alt="hero_img"
+                alt="Dashboard preview showing analytics and performance metrics"
                 className="w-full h-full object-cover object-center"
                 fetchPriority="high"
               />
               <div className="absolute right-4 bottom-4">
-                <button className="inline-flex items-center gap-2 rounded-full px-4 py-2 bg-white/6 backdrop-blur-sm hover:bg-white/10 transition focus:outline-none">
-                  <IoPlayOutline className="text-xl" />
+                <button
+                  className="inline-flex items-center gap-2 rounded-full px-4 py-2 bg-white/6 backdrop-blur-sm hover:bg-white/10 transition focus:outline-none"
+                  aria-label="Watch case study video"
+                >
+                  <IoPlayOutline className="text-xl" aria-hidden="true" />
                   <span className="text-xs">See case study</span>
                 </button>
               </div>
@@ -187,7 +194,7 @@ const Hero = () => {
                 className="w-14 h-10 rounded-lg overflow-hidden border border-white/6"
               >
                 <img
-                  alt="project-thumbnail"
+                  alt=""
                   className="w-full h-full object-cover"
                   src={thumbnail_1}
                 />
@@ -206,7 +213,7 @@ const Hero = () => {
                 className="w-14 h-10 rounded-lg overflow-hidden border border-white/6"
               >
                 <img
-                  alt="project-thumbnail"
+                  alt=""
                   className="w-full h-full object-cover"
                   src={thumbnail_2}
                 />
@@ -225,7 +232,7 @@ const Hero = () => {
                 className="w-14 h-10 rounded-lg overflow-hidden border border-white/6"
               >
                 <img
-                  alt="project-thumbnail"
+                  alt=""
                   className="w-full h-full object-cover"
                   src={thumbnail_3}
                 />

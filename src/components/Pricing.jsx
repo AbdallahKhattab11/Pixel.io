@@ -113,7 +113,10 @@ const Pricing = () => {
                     key={fIndex}
                     className="flex items-start gap-3 text-sm text-gray-300"
                   >
-                    <LuCheck className="w-5 h-5 text-indigo-400 shrink-0" />
+                    <LuCheck
+                      className="w-5 h-5 text-indigo-400 shrink-0"
+                      aria-hidden="true"
+                    />
                     <span>{feature}</span>
                   </li>
                 ))}
@@ -121,6 +124,7 @@ const Pricing = () => {
 
               {/* Action Button */}
               <button
+                aria-label={`Get started with ${plan.name} plan`}
                 className={`w-full py-3 px-6 rounded-xl font-semibold text-sm transition-all active:scale-95
                   ${
                     plan.isPopular
